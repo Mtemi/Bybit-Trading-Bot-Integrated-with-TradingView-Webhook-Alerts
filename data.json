@@ -1,0 +1,9 @@
+{"type": "Market",
+"side": "Sell",
+"amount": "10",
+"symbol": "BTCUSD",
+"takeProfit": "5",
+"stopLoss": "3",
+"trailingStop": "0",
+"leverage": "5",
+"key": "f7dea65b1c167651e830756a94f13d07f0b8c26b6a46f76f2afed966"}
