@@ -1,6 +1,9 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook
 Python based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions
-
+Importantly make sure you create an account on Bybit as well as TradingView: 
+Have knowledge in preparing a python environment, then normal procedures of running python code applies. 
+A web app of this app is in the making. Where you can set your private and public Bybit keys. The parameters are set from TradingView webhooks. 
+several webhooks can be applied. 
 User is able to set TradingView alerts and decide what will happen when each one fires.
 
 Options available are as follows
@@ -15,8 +18,8 @@ symbol - BTCUSD, ETHUSD, XRPUSD, EOSUSD
 
 Others that can be added/ Some like SL/TS are available: 
 --------
-take profit
-stop loss / trailing stop
+take profit(TP)
+stop loss(SL) / trailing stop(TS)
 
 Before opening a trade it checks to see if the trader is already in a position.
 
@@ -27,9 +30,9 @@ If trader is in a trade of the opposite direction it automatically closes that p
 For closing a position the bot provides an option to either exit a certain amount of contracts to take partial profits or the close whole position.
 
 
-In terms of giving these commands/variables that decide what action to take,the botgoes into two routes.
+In terms of giving these commands/variables that decide what action to take,the bot goes into two routes.
 
-1. Trading Variables are added inside the webhook as a message that is sent from TradingView. JSON message. 
+1. Trading Variables are added inside the webhook as a message that is sent from TradingView as a JSON message. 
 
 2. As a trader, you addd the variables to the end of the URL that points to our script and use that as the URL for the webhook to be sent to.
 
