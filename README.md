@@ -1,5 +1,5 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook
-Python PHP based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions
+Python based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions
 
 User is able to set TradingView alerts and decide what will happen when each one fires.
 
