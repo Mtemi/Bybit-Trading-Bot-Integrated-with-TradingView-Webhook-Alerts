@@ -1,6 +1,6 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook
 
-Access Bybit Documentation here:  https://bybit-exchange.github.io/docs/inverse/#t-introduction 
+Access Bybit Documentation here:  https://bybit-exchange.github.io/docs
 
 REQUIREMENTS: 
 
