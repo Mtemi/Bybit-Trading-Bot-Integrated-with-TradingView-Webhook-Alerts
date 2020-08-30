@@ -1,5 +1,5 @@
 """
-TraderMEX is a python bot that works with tradingview's webhook alerts!
+Bybit a python bot that works with tradingview's webhook alerts!
 This bot is not affiliated with tradingview and was created by https://www.freelancer.com/u/Beannsofts
 
 I expect to update this as much as possible to add features as they become available!
