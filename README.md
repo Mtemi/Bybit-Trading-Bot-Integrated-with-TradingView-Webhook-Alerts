@@ -2,6 +2,8 @@
 
 Access Bybit Documentation here:  https://bybit-exchange.github.io/docs/inverse/#t-introduction
 
+Integration with Telegram is available. 
+
 REQUIREMENTS: 
 
 Python based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions Importantly make sure you create an account on Bybit as well as TradingView: Have knowledge in preparing a python environment, then normal procedures of running python code applies. A web app of this app is in the making. Where you can set your private and public Bybit keys. The parameters are set from TradingView webhooks. several webhooks can be applied. User is able to set TradingView alerts and decide what will happen when each one fires.
