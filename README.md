@@ -2,7 +2,7 @@
 
 Access Bybit Documentation here:  https://bybit-exchange.github.io/docs/inverse/#t-introduction
 
-Join our Discord Server https://discord.com/channels/782284496443539476/782284496443539479 for Assistance and Updates
+Join our Discord Server https://discord.gg/bwCJTVDbRr for Assistance and Updates
 
 Integration with Telegram is available. 
 
