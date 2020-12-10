@@ -1,5 +1,7 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook
 
+Share some BTC here: 3CFJYnQUHjurLddPrw4NC9yk4tE6AXYiXX and get free insttalations, setup and Telegram Integrations.
+
 Access Bybit Documentation here:  https://bybit-exchange.github.io/docs/inverse/#t-introduction
 
 Sample work created from this bot: Here is the link: https://t.me/MoneyBadgerTradingAutoBot . This is a live bot and so you need valid Bybit Keys and create an account under the refferal link on the welcome message of the bot. We also have work on Binance Spot, Futures Bot and Phemex. Here is a version that you can use without referral link. Please have a look at it: https://t.me/borsacabybitbot 
