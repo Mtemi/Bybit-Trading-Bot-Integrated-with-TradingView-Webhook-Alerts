@@ -8,7 +8,7 @@ Sample work created from this bot: Here is the link: https://t.me/MoneyBadgerTra
 
 Join our Discord Server https://discord.gg/bwCJTVDbRr for Assistance and Updates
 
-Integration with Telegram is available. 
+Upgrade with Telegram integration is available as per your requirements. 
 
 REQUIREMENTS: 
 
