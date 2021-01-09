@@ -2,7 +2,7 @@
 
 Access Bybit Documentation here:  https://bybit-exchange.github.io/docs/inverse/#t-introduction
 
-Sample work created from this bot: Here is the link: https://t.me/MoneyBadgerTradingAutoBot . This is a live bot and so you need valid Bybit Keys and create an account under the refferal link on the welcome message of the bot. We also have work on Binance Spot, Futures Bot and Phemex. 
+Sample work created from this bot: Here is the link: https://t.me/MoneyBadgerTradingAutoBot . This is a live bot and so you need valid Bybit Keys and create an account under the refferal link on the welcome message of the bot.
 
 Join our Discord Server https://discord.gg/bwCJTVDbRr for Assistance and Updates
 
