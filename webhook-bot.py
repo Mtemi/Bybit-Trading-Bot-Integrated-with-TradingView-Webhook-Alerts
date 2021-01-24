@@ -39,7 +39,9 @@ def webhook():
     if request.method == 'POST':
         # Parse the string data from tradingview into a python dict
         
-        datas = parse_webhook(request.get_data(as_text=True))
+        # datas = parse_webhook(request.get_data(as_text=True))
+        # print(datas)
+        datas = request.get_data(as_text=True)
         print(datas)
         # Check that the key is correct
         if get_token() == datas['key']:
