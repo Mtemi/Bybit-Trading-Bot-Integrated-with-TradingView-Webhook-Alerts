@@ -11,6 +11,7 @@ from requests.exceptions import HTTPError
 from websocket import WebSocketApp
 import pandas as pd
 
+test = 'test'
 class Bybit():
     url_main = 'https://api.bybit.com'
     url_test = 'https://api-testnet.bybit.com'
@@ -189,20 +190,20 @@ class Bybit():
             return resp.text
 
     def place_active_order(self, side=None, symbol=None, order_type=None,
-                           qty=None, price=None,
-                           time_in_force='GoodTillCancel', take_profit=None,
-                           stop_loss=None, order_link_id=None):
+        qty=None, price=None,
+        time_in_force='GoodTillCancel', take_profit=None,
+        stop_loss=None, reduce_only=None, order_link_id=None):
 
         payload = {
-            'side': side,
-            'symbol': symbol if symbol else self.symbol,
-            'order_type': order_type,
-            'qty': qty,
-            'price': price,
-            'time_in_force': time_in_force,
-            'take_profit': take_profit,
-            'stop_loss': stop_loss,
-            'order_link_id': order_link_id
+        'side': side,
+        'symbol': symbol if symbol else self.symbol,
+        'order_type': order_type,
+        'qty': qty,
+        'price': price,
+        'time_in_force': time_in_force,
+        'take_profit': take_profit,
+        'stop_loss': stop_loss,
+        'order_link_id': order_link_id
         }
         #/open-api/order/create
         return self._request('POST', '/v2/private/order/create', payload=payload)
@@ -416,6 +417,11 @@ class Bybit():
             'symbol': symbol if symbol else self.symbol
         }
         return self._request('GET', '/v2/public/tickers', payload=payload)
+
+    def get_api_data(self):
+
+        payload = {}
+        return self._request('GET', '/open-api/api-key', payload=payload)
 
     def replace_active_order(self, order_id = None, symbol=None,
                               p_r_qty=None, p_r_price=None):
