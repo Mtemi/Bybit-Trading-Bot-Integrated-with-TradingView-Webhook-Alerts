@@ -7,18 +7,12 @@ import ccxt
 import ast
 import bybit
 
-# api_key = "5ImypE73VdLVRKxWNg"
-# api_secret= "OBJTXzWR74I6mFZXZN2i0lS49WgCWAcuG2WZ"
-# api_key = "a3mxwletKMbd7pNVVZ"
-# api_secret= "epzYwlzw12ZMaViJuUi7dmiTCa7RO4ALlyZq"
 def parse__price_webhook(price_webhook_data):
 
       
-    # T03YZL3d27TpQRKAj0 # ntelfxFsJA4R8mVCbZN2UMPyAbwsEmb2c94m
-    bybit1 = Bybit(api_key="0GcknPBktCEy8GGSl1",
-                 secret="gXsaQOKZ7U72e7I16HLOW8lMUCig6CfBI2tX", symbol=data['symbol'], ws=True, test=False)
-    #bybit1 = Bybit(api_key='JB76Njd3U64amNpkHF',
-                 #secret='LblyOzDpw23uwxfKxPH5itad50MIsTlW6iyW', symbol=data['symbol'], ws=True, test=True)
+    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
+                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
+ 
 
     bybit1.cancel_all_active_orders(symbol=data['symbol'])
     bybit1.cancel_all_conditional_orders(symbol=data['symbol'])
@@ -79,14 +73,10 @@ def parse_webhook(webhook_data):
     return datasa
 
 def send_order(data):
-    # api_key = "a3mxwletKMbd7pNVVZ"
-    # api_secret= "epzYwlzw12ZMaViJuUi7dmiTCa7RO4ALlyZq"
-    #data['side'] = 'Sell'
-    #bybit1 = Bybit(api_key='JB76Njd3U64amNpkHF',
-                #secret='LblyOzDpw23uwxfKxPH5itad50MIsTlW6iyW', symbol=data['symbol'], ws=True, test=True)
+  
     #Client API Keys
-    bybit1 = Bybit(api_key="0GcknPBktCEy8GGSl1",
-                 secret="gXsaQOKZ7U72e7I16HLOW8lMUCig6CfBI2tX", symbol=data['symbol'], ws=True, test=False)
+    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
+                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
     
     # Send the order to the exchange, using the values from the tradingview alert.
     print('Sending:', data['symbol'], data['type'], data['side'], data['amount'])
