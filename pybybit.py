@@ -52,15 +52,13 @@ class Bybit():
                         }
 
         positions = self.get_position_http()['result']
-        print('Positions ----------------------------------------------------------')
-        print(positions)
+       
         if positions is None:
-            print('returned list is None')
+            pass
         else:
-            print('returned list is not None')
             for p in positions:
-                if p['symbol'] == self.symbol:
-                    self.ws_data['position'].update(p)
+                if p['data']['symbol'] == self.symbol:
+                    self.ws_data['position'].update(p['data'])
                     break
 
         Thread(target=self.ws.run_forever, daemon=True).start()
@@ -165,6 +163,9 @@ class Bybit():
         sign = hmac.new(self.secret.encode('utf-8'),
                         param_str.encode('utf-8'), hashlib.sha256).hexdigest()
         payload['sign'] = sign
+        
+        #print('SIGNED PAYLOAD SIGNED PAYLOAD SIGNED PAYLOAD SIGNED PAYLOAD SIGNED PAYLOAD SIGNED PAYLOAD SIGNED PAYLOAD SIGNED  PAYLOAD ')
+        #print(payload)
 
         if method == 'GET':
             query = payload
@@ -206,8 +207,42 @@ class Bybit():
         'order_link_id': order_link_id
         }
         #/open-api/order/create
+
+        print("skfk", payload)
         return self._request('POST', '/v2/private/order/create', payload=payload)
-    
+
+    def place_active_order_v2(self, data):
+
+        # example of payload
+        # payload = {
+        # 'side': side,
+        # 'symbol': symbol if symbol else self.symbol,
+        # 'order_type': order_type,
+        # 'qty': qty,
+        # 'price': price,
+        # 'time_in_force': time_in_force,
+        # 'take_profit': take_profit,
+        # 'stop_loss': stop_loss,
+        # 'order_link_id': order_link_id
+        # }
+
+        #/open-api/order/create
+       
+        return self._request('POST', '/v2/private/order/create', payload=data)
+        
+    def place_active_order_ts_v2(self,payload):
+        # example of payload
+        # payload = {
+        #     'symbol': symbol if symbol else self.symbol,
+        #     'take_profit': take_profit,
+        #     'stop_loss': stop_loss,
+        #     'trailing_stop': trailing_stop,
+        #     'new_trailing_active': new_trailing_active
+        # }
+        #/open-api/position/trading-stop
+        return self._request('POST', '/v2/private/position/trading-stop', payload=payload)
+
+
     def place_active_order_ts(self, symbol=None, take_profit=None,
                            stop_loss=None, trailing_stop=None, new_trailing_active=None):
 
@@ -219,8 +254,8 @@ class Bybit():
             'new_trailing_active': new_trailing_active
         }
         #/open-api/position/trading-stop
-        return self._request('POST', '/open-api/position/trading-stop', payload=payload)
-
+        return self._request('POST', '/v2/private/position/trading-stop', payload=payload)
+        
     def get_active_order(self, order_id=None, order_link_id=None, symbol=None,
                          sort=None, order=None, page=None, limit=None,
                          order_status=None):
@@ -236,14 +271,14 @@ class Bybit():
             'order_status': order_status
         }
         return self._request('GET', '/open-api/order/list', payload=payload)
-
+    """
     def cancel_active_order(self, order_id=None):
 
         payload = {
             'order_id': order_id
         }
         return self._request('POST', '/open-api/order/cancel', payload=payload)
-
+    """
     def place_conditional_order(self, side=None, symbol=None, order_type=None,
                                 qty=None, price=None, base_price=None,
                                 stop_px=None, time_in_force='GoodTillCancel',
@@ -292,6 +327,11 @@ class Bybit():
         payload = {}
         return self._request('GET', '/user/leverage', payload=payload)
 
+    def get_time_stamp(self):
+
+        payload = {}
+        return self._request('GET', '/v2/public/time', payload=payload)
+
     def change_leverage(self, symbol=None, leverage=None):
 
         payload = {
@@ -303,7 +343,15 @@ class Bybit():
     def get_position_http(self):
 
         payload = {}
-        return self._request('GET', '/position/list', payload=payload)
+        return self._request('GET', '/v2/private/position/list', payload=payload)
+
+    def get_position_list(self, symbol=None):
+
+        payload = {
+            'symbol': symbol if symbol else self.symbol
+        }
+        return self._request('GET', '/v2/private/position/list', payload=payload)
+
 
     def change_position_margin(self, symbol=None, margin=None):
 
@@ -360,28 +408,22 @@ class Bybit():
         }
         return self._request('GET', '/v2/public/kline/list', payload=payload)
 
-    def place_active_order_v2(self, symbol=None, side=None, order_type=None,
-                              qty=None, price=None,
-                              time_in_force='GoodTillCancel',
-                              order_link_id=None):
- 
-        payload = {
-            'symbol': symbol if symbol else self.symbol,
-            'side': side,
-            'order_type': order_type,
-            'qty': qty,
-            'price': price,
-            'time_in_force': time_in_force,
-            'order_link_id': order_link_id
-        }
-        return self._request('POST', '/v2/private/order/create', payload=payload)
-
+    """
     def cancel_active_order_v2(self, order_id=None):
 
         payload = {
             'order_id': order_id
         }
         return self._request('POST', '/v2/private/order/cancel', payload=payload)
+    """
+    def cancel_active_order(self, symbol=None, order_id=None):
+
+        payload = {
+            'symbol': symbol if symbol else self.symbol, 
+            'order_id': order_id
+        }
+        return self._request('POST', '/v2/private/order/cancel', payload=payload)
+
 
     def cancel_all_active_orders(self, symbol=None):
 
@@ -435,3 +477,16 @@ class Bybit():
         return self._request('POST', '/open-api/order/replace', payload=payload)
 
 
+    def get_user_trade_record(self, symbol=None, start_time=None, end_time=None, page=None, exec_type=None, limit=None,order=None):
+
+        payload = {
+            'symbol': symbol,
+            'start_time': start_time,
+            'end_time':end_time,
+            'exec_type': exec_type,
+            'page':page,
+            'limit':limit,
+            'order':order
+
+        }
+        return self._request('GET', '/v2/private/trade/closed-pnl/list', payload=payload)
