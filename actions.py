@@ -7,15 +7,12 @@ import ccxt
 import ast
 import bybit
 
-
 def parse__price_webhook(price_webhook_data):
 
       
-    # T03YZL3d27TpQRKAj0 # ntelfxFsJA4R8mVCbZN2UMPyAbwsEmb2c94m
-    bybit1 = Bybit(api_key='T03YZL3d27TpQRKAj0',
-                 secret='ntelfxFsJA4R8mVCbZN2UMPyAbwsEmb2c94m', symbol=data['symbol'], ws=True, test=True)
-    #bybit1 = Bybit(api_key='JB76Njd3U64amNpkHF',
-                 #secret='LblyOzDpw23uwxfKxPH5itad50MIsTlW6iyW', symbol=data['symbol'], ws=True, test=True)
+    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
+                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
+ 
 
     bybit1.cancel_all_active_orders(symbol=data['symbol'])
     bybit1.cancel_all_conditional_orders(symbol=data['symbol'])
@@ -76,12 +73,10 @@ def parse_webhook(webhook_data):
     return datasa
 
 def send_order(data):
-    #data['side'] = 'Sell'
-    #bybit1 = Bybit(api_key='JB76Njd3U64amNpkHF',
-                #secret='LblyOzDpw23uwxfKxPH5itad50MIsTlW6iyW', symbol=data['symbol'], ws=True, test=True)
+  
     #Client API Keys
-    bybit1 = Bybit(api_key='T03YZL3d27TpQRKAj0',
-                secret='ntelfxFsJA4R8mVCbZN2UMPyAbwsEmb2c94m', symbol=data['symbol'], ws=True, test=True)
+    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
+                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
     
     # Send the order to the exchange, using the values from the tradingview alert.
     print('Sending:', data['symbol'], data['type'], data['side'], data['amount'])
@@ -90,7 +85,8 @@ def send_order(data):
     print('Type:', data['type'])
     wallet_balance = bybit1.get_wallet_balance('BTC')
     print('Wallet Balance ----------------------------------------------------------')
-    #print(wallet_balance)
+    
+    print("Wallet Balance------------------------------------------------((((",wallet_balance)
     print(wallet_balance['result']['BTC']['available_balance'])
     print('Place Order Amount')
     intamountpercentage  = float(data['amount'])/100
@@ -111,14 +107,14 @@ def send_order(data):
     position_result  = position['result']
     print('Position Result Value',position_result)
     json.dumps(position_result, indent=2)
-    print('Position Result', position_result[0]['side'])
-    position_side = position_result[0]['side']
-    position_take_profit = position_result[0]['take_profit']
+    print('Position Result', position_result[0]['data']['side'])
+    position_side = position_result[0]['data']['side']
+    position_take_profit = position_result[0]['data']['take_profit']
     print('Position Take Profit', position_take_profit)
-    position_stop_loss = position_result[0]['stop_loss']
+    position_stop_loss = position_result[0]['data']['stop_loss']
     print('Position Stop Loss', position_stop_loss)
     print('Order ID ----------------------------------------------------------')
-    order_idss = position_result[0]['id']
+    order_idss = position_result[0]['data']['id']
     print('Example Order ID',order_idss)
     #print(position['entry_price'])
 
@@ -132,8 +128,8 @@ def send_order(data):
     #print("Bid Price Value Two", last_price)
 
     #The Position Entry Price Irrespective of where position or not
-    print("Position Entry Price", position_result[0]['entry_price']) 
-    entry_price = float(position_result[0]['entry_price'])
+    print("Position Entry Price", position_result[0]['data']['entry_price']) 
+    entry_price = float(position_result[0]['data']['entry_price'])
     print("Bid Price Value Two", entry_price)
 
     orderamounts = intwalletbalance*last_price
@@ -171,15 +167,15 @@ def send_order(data):
         print('Stop Loss Margin----------------------------------------------------------')
         print(stoploss)
         
-        print('Trailing Stop by 100 ----------------------------------------------------------')
-        tsLoss = float(data['trailingStop'])
-        print(tsLoss/100)
-        print('Multiply By Entry Price ----------------------------------------------------------')
-        tstopLossby100 = tsLoss/100
-        print(tstopLossby100*last_price)
-        tstoploss = tstopLossby100*last_price
-        print('Trailing Stop ----------------------------------------------------------')
-        print(tstoploss)
+        # print('Trailing Stop by 100 ----------------------------------------------------------')
+        # tsLoss = float(data['trailingStop'])
+        # print(tsLoss/100)
+        # print('Multiply By Entry Price ----------------------------------------------------------')
+        # tstopLossby100 = tsLoss/100
+        # print(tstopLossby100*last_price)
+        # tstoploss = tstopLossby100*last_price
+        # print('Trailing Stop ----------------------------------------------------------')
+        # print(tstoploss)
 
         print('Sending Order in ', data['side'],'position')
         order_resp = bybit1.place_active_order(side=data['side'], order_type=data['type'], qty=orderamount,
