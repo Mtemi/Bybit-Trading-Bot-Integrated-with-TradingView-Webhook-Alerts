@@ -1,5 +1,5 @@
 aiodns==1.1.1
-aiohttp==3.6.2
+aiohttp==3.7.4
 async-timeout==3.0.1
 atomicwrites==1.4.0
 attrs==20.1.0
