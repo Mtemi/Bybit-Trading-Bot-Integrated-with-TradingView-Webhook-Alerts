@@ -32,7 +32,7 @@ jaraco.structures==2.0
 jaraco.text==3.2.0
 jaraco.ui==2.0.1
 jaraco.windows==5.0.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 jsonpointer==2.0
 jsonref==0.2
 jsonschema==3.2.0
