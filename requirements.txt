@@ -51,7 +51,7 @@ path==15.0.0
 path.py==12.5.0
 pluggy==0.13.1
 protobuf==3.13.0
-py==1.9.0
+py==1.10.0
 pyaes==1.6.1
 pyasn1==0.4.8
 pycares==3.1.1
