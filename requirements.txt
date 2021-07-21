@@ -9,7 +9,7 @@ bravado-core==5.17.0
 Bybit==0.2.8
 cachelib==0.1.1
 cachetools==4.1.1
-ccxt==1.33.84
+ccxt
 certifi==2020.6.20
 cffi==1.14.2
 chardet==3.0.4
