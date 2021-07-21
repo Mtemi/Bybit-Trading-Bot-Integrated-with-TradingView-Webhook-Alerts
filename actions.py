@@ -7,11 +7,16 @@ import ccxt
 import ast
 import bybit
 
+# ----- set your configuratins here Configurations ---
+bybit_api_key = "---------------"
+bybit_api_secret = "---------------"
+is_test = False  #set to True if you  are using testnet
+
 def parse__price_webhook(price_webhook_data):
 
       
-    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
-                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
+    bybit1 = Bybit(api_key=bybit_api_key,
+                 secret=bybit_api_secret, symbol=data['symbol'], ws=True, test=is_test)
  
 
     bybit1.cancel_all_active_orders(symbol=data['symbol'])
@@ -75,8 +80,8 @@ def parse_webhook(webhook_data):
 def send_order(data):
   
     #Client API Keys
-    bybit1 = Bybit(api_key="dgregeGSlrwefwvwwe1",
-                 secret="gwgwwegweBI2eefeqwfweqtX", symbol=data['symbol'], ws=True, test=False)
+    bybit1 = Bybit(api_key=bybit_api_key,
+                 secret=bybit_api_secret, symbol=data['symbol'], ws=True, test=is_test)
     
     # Send the order to the exchange, using the values from the tradingview alert.
     print('Sending:', data['symbol'], data['type'], data['side'], data['amount'])
@@ -87,6 +92,10 @@ def send_order(data):
     print('Wallet Balance ----------------------------------------------------------')
     
     print("Wallet Balance------------------------------------------------((((",wallet_balance)
+    if wallet_balance['ret_msg'] !="OK":
+        print("Wallet balance fetch error\n", wallet_balance['ret_msg'])
+        return "terminate"
+
     print(wallet_balance['result']['BTC']['available_balance'])
     print('Place Order Amount')
     intamountpercentage  = float(data['amount'])/100
