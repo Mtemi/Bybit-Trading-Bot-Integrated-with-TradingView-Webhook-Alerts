@@ -1,7 +1,7 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal Trading via Telegram
 
 
-# A free Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys and create an account under the refferal link on the welcome message of the bot.
+# A free Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
 
 
 If you are a developer or Learning Python Software Development, you can setup a free version of the bot with the instructions below !!!! 
