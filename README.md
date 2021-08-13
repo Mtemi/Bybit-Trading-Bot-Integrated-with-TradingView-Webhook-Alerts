@@ -1,7 +1,10 @@
 # Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal Trading via Telegram
 
 
-# A free Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
+# A Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
+# Documenttaion on how to install the Pro Version is accessible here:  https://drive.google.com/file/d/15tbaaixwq7iao7wz-5MmwgSkt9CCzyPb/view
+# If you like the Pro Version it will cost you 999 USD. You can sent the amount in crypto via my metamask wallet address:  0x57840eC0971974246654cDDA3069369b16608BDe 
+# After Payment contact me on whatsapp:  +254795557216 and I will share link to download the files and also assit you with setup. 
 
 
 If you are a developer or Learning Python Software Development, you can setup a free version of the bot with the instructions below !!!! 
