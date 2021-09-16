@@ -39,6 +39,31 @@ Note: Lines 45 and 46 cannot be active at same time.  Line 45 runs local server 
 Line 46 is commended with # sign so that it’s inactive since line 45 is active for the server to run locally.  In my code I have used Ngrok to tunnel my local server ip: 127.0.0.7:80 to a random temporary public address assigned to me by Ngrok. This is the address I placed on TradingView webhook section. This was I was able to make TradingView requests and responses; see lines 21 – 41 of webhook-bot.py file.   
 On the message section, place a JSON formatted message as below: 
  {"type": "Market", "side": "Buy", "amount": "10", "symbol": "BTCUSD", "stopLoss": "1", "leverage": "3", "key": "f7dea65b1c167651e830756a94f13d07f0b8c26b6a46f76f2afed966"}
+
+## Api keys Configurations
+Navigate to config.py file and edit the below configurations
+```
+API_KEY = "Enter your api key here"
+API_SECRET = "Enter your api secret here"
+IS_TEST = False #set to True if you  are using testnet
+
+
+```
+
+## webhook message
+```
+{
+    "type": "Market",
+    "side": "Buy",
+    "amount": "10",
+    "symbol": "BTCUSD",
+    "stopLoss": 3,
+    "leverage": "3",
+    "trailingStop":"None",
+    "takeProfit":1,
+    "key": "f7dea65b1c167651e830756a94f13d07f0b8c26b6a46f76f2afed966"
+}
+```
 The symbols vary and here is a list extracted form a function:  print(list(exchange.markets.keys())) found in line 57 of the project file actions.py. 
 ['.EVOL7D', '.BADAXBT', '.BADAXBT30M', '.BBCHXBT', '.BBCHXBT30M', '.BEOSXBT', '.BEOSXBT30M', '.BXRPXBT', '.BXRPXBT30M', '.BTRXXBT', '.BTRXXBT30M', '.BADAXBT_NEXT', '.BBCHXBT_NEXT', '.BEOSXBT_NEXT', '.BTRXXBT_NEXT', '.BXRPXBT_NEXT', '.BXRP_NEXT', '.BXRP', '.XRPBON', '.XRPBON2H', '.XRPBON8H', '.XRPUSDPI', '.XRPUSDPI2H', '.XRPUSDPI8H', 'XRPH20', 'BCHH20', 'ADAH20', 'EOSH20', 'TRXH20', 'XRP/USD', '.XBT', '.XBT30M', '.XBTBON', '.XBTBON8H', '.XBTUSDPI', '.XBTUSDPI8H', '.XBTBON2H', '.XBTUSDPI2H', '.BXBT', '.BXBT30M', '.BXBT_NEXT', '.BVOL', '.BVOL24H', '.BVOL7D', '.ETHBON', '.ETHBON2H', '.ETHBON8H', '.ETHUSDPI', '.ETHUSDPI2H', '.ETHUSDPI8H', '.BETH', '.BETH30M', '.BETHXBT', '.BETHXBT30M', '.BETH_NEXT', '.BETHXBT_NEXT', '.BLTCXBT', '.BLTCXBT30M', '.BLTCXBT_NEXT', '.USDBON', '.USDBON8H', '.USDBON2H', 'BTC/USD', 'XBTH20', 'XBTM20', 'ETH/USD', 'ETHH20', 'LTCH20']
 In our case:  we picked the BTC/USD pair.  You can pick any other price. I have commended out the function:  print(list(exchange.markets.keys())) found in line 57 of the project file actions.py since I only used it during development to generate markey keys/pais above.  We don’t need it now. 

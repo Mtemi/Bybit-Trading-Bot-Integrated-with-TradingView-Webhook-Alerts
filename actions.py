@@ -6,11 +6,11 @@ import json
 import ccxt
 import ast
 import bybit
-
+from config import Config
 # ----- set your configuratins here Configurations ---
-bybit_api_key = "---------------"
-bybit_api_secret = "---------------"
-is_test = False  #set to True if you  are using testnet
+bybit_api_key = Config.API_KEY
+bybit_api_secret = Config.API_SECRET
+is_test = Config.IS_TEST  #set to True if you  are using testnet
 
 def parse__price_webhook(price_webhook_data):
 
@@ -199,11 +199,10 @@ def send_order(data):
         #We want to Add TP to the Market Order
         print('Sending Order in ', data['side'],'position')
         order_resp = bybit1.place_active_order(side=data['side'], order_type=data['type'],
-        qty = orderamount, price=takeprofit,time_in_force='PostOnly', reduce_only='True')
+        qty = orderamount,time_in_force='PostOnly', reduce_only='True')
         print(json.dumps(order_resp, indent=2))
         nonebuy = order_resp['result']['order_id'] if order_resp['result'] else None
         oldqty = orderamount
-        oldprice = takeprofit
         nonebuy = nonebuy
         
 

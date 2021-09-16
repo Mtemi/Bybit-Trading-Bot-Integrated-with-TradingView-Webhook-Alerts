@@ -54,6 +54,7 @@ def webhook():
                 send_order(datas)
                 return '', 200
             except Exception as e:
+                print("Error placing your order:\n{0}".format(e))
                 return "Error placing your order:\n{0}".format(e)
         else:
             logger.error("Incoming Signal From Unauthorized User.")
