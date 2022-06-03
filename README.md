@@ -1,15 +1,19 @@
+# BRIEF: 
+
 Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal Trading via Telegram
 
+# ABOUT US: 
 You can hire me here:  https://freelancer.com/u/Beannsofts  for any trading bot development.  We have bots for trading in any cryptocurrency exchange. 
 
 Access 3commas clone bot here(under development): https://3c.crypttops.com/ and api/backend: https://api.3commas.crypttops.com/ (with the ability for users of the platform to create custom and profitable trading strategies. Users are able to create Smart/GRID/DCA trading bots,Create and Upload custom trading bots, Integrate with TradingView(https://www.tradingview.com/), receive Telegram notifications, Manage Crypto profile across various investments, Terminal Trading as well as get live crypto market charts and trade data. ) , https://binatv.crypttops.com/ (Advanced Smart Trading Application and TradingView Integration) , https://binancetradingview.crypttops.com/(Smart Trading Application and TradingView Integration) and other community implementations(https://freqtrade.crypttops.com/)
 
+# UPGRADED VERSION OF THIS REPO(BOT): 
 A Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
 Documenttaion on how to install the Pro Version is accessible here:  https://drive.google.com/file/d/15tbaaixwq7iao7wz-5MmwgSkt9CCzyPb/view
 If you like the Pro Version it will cost you 999 USD. You can sent the amount in crypto via my metamask wallet address:  0x57840eC0971974246654cDDA3069369b16608BDe 
 After Payment contact me on whatsapp:  +254795557216 and I will share link to download the files and also assit you with setup. 
 
-
+# INTRODUCTION: 
 If you are a developer or Learning Python Software Development, you can setup a free version of the bot with the instructions below !!!! 
 
 The code provided here may need some development intuition because it may not necessarily work since Bybit keep updating their REST API endpoints and their websockets. Incase of issues installing the code join our discord here:  https://discord.gg/XKNBAGtmuB and ask the questions you may have. 
