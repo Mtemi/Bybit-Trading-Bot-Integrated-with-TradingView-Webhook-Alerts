@@ -1,5 +1,9 @@
 Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal Trading via Telegram
 
+You can hire me here:  https://freelancer.com/u/Beannsofts  for any trading bot development.  We have bots for trading in any cryptocurrency exchange. 
+
+Access 3commas clone bot here: https://3c.crypttops.com/ and api/backend: https://api.3commas.crypttops.com/ (with the ability for users of the platform to create custom and profitable trading strategies. Users are able to create Smart/GRID/DCA trading bots,Create and Upload custom trading bots, Integrate with TradingView(https://www.tradingview.com/), receive Telegram notifications, Manage Crypto profile across various investments, Terminal Trading as well as get live crypto market charts and trade data. ) , https://binatv.crypttops.com/ (Advanced Smart Trading Application and TradingView Integration) , https://binancetradingview.crypttops.com/(Smart Trading Application and TradingView Integration) and other community implementations(https://freqtrade.crypttops.com/)
+
 A Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
 Documenttaion on how to install the Pro Version is accessible here:  https://drive.google.com/file/d/15tbaaixwq7iao7wz-5MmwgSkt9CCzyPb/view
 If you like the Pro Version it will cost you 999 USD. You can sent the amount in crypto via my metamask wallet address:  0x57840eC0971974246654cDDA3069369b16608BDe 
@@ -74,7 +78,7 @@ IS_TEST = False #set to True if you  are using testnet
 ```
 The symbols vary and here is a list extracted form a function:  print(list(exchange.markets.keys())) found in line 57 of the project file actions.py. 
 ['.EVOL7D', '.BADAXBT', '.BADAXBT30M', '.BBCHXBT', '.BBCHXBT30M', '.BEOSXBT', '.BEOSXBT30M', '.BXRPXBT', '.BXRPXBT30M', '.BTRXXBT', '.BTRXXBT30M', '.BADAXBT_NEXT', '.BBCHXBT_NEXT', '.BEOSXBT_NEXT', '.BTRXXBT_NEXT', '.BXRPXBT_NEXT', '.BXRP_NEXT', '.BXRP', '.XRPBON', '.XRPBON2H', '.XRPBON8H', '.XRPUSDPI', '.XRPUSDPI2H', '.XRPUSDPI8H', 'XRPH20', 'BCHH20', 'ADAH20', 'EOSH20', 'TRXH20', 'XRP/USD', '.XBT', '.XBT30M', '.XBTBON', '.XBTBON8H', '.XBTUSDPI', '.XBTUSDPI8H', '.XBTBON2H', '.XBTUSDPI2H', '.BXBT', '.BXBT30M', '.BXBT_NEXT', '.BVOL', '.BVOL24H', '.BVOL7D', '.ETHBON', '.ETHBON2H', '.ETHBON8H', '.ETHUSDPI', '.ETHUSDPI2H', '.ETHUSDPI8H', '.BETH', '.BETH30M', '.BETHXBT', '.BETHXBT30M', '.BETH_NEXT', '.BETHXBT_NEXT', '.BLTCXBT', '.BLTCXBT30M', '.BLTCXBT_NEXT', '.USDBON', '.USDBON8H', '.USDBON2H', 'BTC/USD', 'XBTH20', 'XBTM20', 'ETH/USD', 'ETHH20', 'LTCH20']
-In our case:  we picked the BTC/USD pair.  You can pick any other price. I have commended out the function:  print(list(exchange.markets.keys())) found in line 57 of the project file actions.py since I only used it during development to generate markey keys/pais above.  We don’t need it now. 
+In our case:  we picked the BTC/USD pair.  You can pick any other coin pair against usdt. I have commended out the function:  print(list(exchange.markets.keys())) found in line 57 of the project file actions.py since I only used it during development to generate markey keys/pais above.  We don’t need it now. 
 You will need an Account with Bybiy Platform so that you can generate an API key and secret. 
 You will need to open the actions.py file with any text editor and add your API key and secret codes as in below snip. Lines:  15 – 16. 
 Next you need to familiarize yourself with basic python syntax and how to setup the environment for various Oss:  Linux, Windows, macOS. Know a bit of pip command as you may use it a lot in setting up the environment. You also need know a bit of OS commands for both linux, windows.  You need some python libraries: Flask, CCXT. 
