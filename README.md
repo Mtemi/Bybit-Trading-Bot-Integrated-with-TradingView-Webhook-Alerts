@@ -15,7 +15,7 @@ If you like the Pro Version it will cost you 999 USD. You can sent the amount in
 After Payment contact me on whatsapp:  +254795557216 and I will share link to download the files and also assit you with setup. 
 
 # INTRODUCTION: 
-If you are a developer or Learning Python Software Development, you can setup a free version of the bot with the instructions below !!!! 
+If you are a developer or Learning Python Software Development, you can setup a free version of this bot with the instructions below !!!! 
 
 The code provided here may need some development intuition because it may not necessarily work since Bybit keep updating their REST API endpoints and their websockets. Incase of issues installing the code join our discord here:  https://discord.gg/XKNBAGtmuB and ask the questions you may have. 
 
