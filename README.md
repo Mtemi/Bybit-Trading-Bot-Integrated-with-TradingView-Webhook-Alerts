@@ -1,6 +1,6 @@
 # BRIEF: 
 
-Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal Trading via Telegram
+Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook . Here is also an advanced risk Bybit orders risk management algorithm: https://disdev.crypttops.com/
 
 # ABOUT US: 
 You can hire me here:  https://freelancer.com/u/Beannsofts  for any trading bot development.  We have bots for trading in any cryptocurrency exchange. 
