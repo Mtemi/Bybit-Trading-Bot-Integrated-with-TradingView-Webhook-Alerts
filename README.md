@@ -54,7 +54,7 @@ Line 46 is commended with # sign so that it’s inactive since line 45 is active
 On the message section, place a JSON formatted message as below: 
  {"type": "Market", "side": "Buy", "amount": "10", "symbol": "BTCUSD", "stopLoss": "1", "leverage": "3", "key": "f7dea65b1c167651e830756a94f13d07f0b8c26b6a46f76f2afed966"}
 
-## API KEY AND SECRET CONFIG
+## Add your Bybit API key and Secret 
 Navigate to config.py file and edit the below configurations
 ```
 API_KEY = "Enter your api key here"
@@ -64,7 +64,7 @@ IS_TEST = False #set to True if you  are using testnet
 
 ```
 
-## WEBHOOK PAYLOAD
+## TradingView message config
 ```
 {
     "type": "Market",
