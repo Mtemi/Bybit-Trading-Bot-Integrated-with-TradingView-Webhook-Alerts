@@ -6,14 +6,13 @@ One of the major risks in trading is opening a futures position that realizes pr
 
 I have to build a risk management Dynamic Grid algorithm that fully or partially closes an open position when PNL starts dropping thus securing users' funds. The risk management algorithm is complete and I can test it with TRADERS who have best strategies for trade entries. This algorithm utilizes https://www.tradingview.com/ for trade entries, however, ANY source of trade signals is still applicable. The sole function of the Dynamic Grid Risk Algorithm is to manage open positions by tracking PNL. The algorithm chills as long as PNL is positive but partially or fully closes an open position when PNL starts reducing. This helps traders minimize the loss of realized profits by 98%. The dynamic grid bot is accessible here: https://disdev.crypttops.com/  .To use the algorithm , you need to register, add your Bybit API key and secret, then I will share info on how to connect with any TradingView strategy. I can as well connect you to my TradingView strategy.  
 
-# UPGRADED VERSION OF THIS REPO(BOT): 
-A Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
+# Better Version: 
+A Better Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
 Documenttaion on how to install the Pro Version is accessible here:  https://drive.google.com/file/d/15tbaaixwq7iao7wz-5MmwgSkt9CCzyPb/view
-If you like the Pro Version it will cost you 999 USD. You can sent the amount in crypto via my metamask wallet address:  0x57840eC0971974246654cDDA3069369b16608BDe 
-After Payment contact me on whatsapp:  +254795557216 and I will share link to download the files and also assit you with setup. 
+Contact me on whatsapp:  +254795557216 if you need the better version. 
 
-# INTRODUCTION: 
-If you are a developer or Learning Python Software Development, you can setup a free version of this bot with the instructions below !!!! 
+# Setup of this Bot: 
+You can setup a free version of this bot with the instructions below !!!! 
 
 The code provided here may need some development intuition because it may not necessarily work since Bybit keep updating their REST API endpoints and their websockets. Incase of issues installing the code join our discord here:  https://discord.gg/XKNBAGtmuB and ask the questions you may have. 
 
@@ -23,7 +22,7 @@ Join our Discord Server https://discord.gg/bwCJTVDbRr for Assistance and Updates
 
 Upgrade with Telegram integration is available as per your requirements. 
 
-# REQUIREMENTS: 
+# ..: 
 
 Python based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions Importantly make sure you create an account on Bybit as well as TradingView: Have knowledge in preparing a python environment, then normal procedures of running python code applies. A web app of this app is in the making. Where you can set your private and public Bybit keys. The parameters are set from TradingView webhooks. several webhooks can be applied. User is able to set TradingView alerts and decide what will happen when each one fires.
 
@@ -42,7 +41,7 @@ In terms of giving these commands/variables that decide what action to take,the 
 1.	Trading Variables are added inside the webhook as a message that is sent from TradingView as a JSON message.
 2.	As a trader, you addd the variables to the end of the URL that points to our script and use that as the URL for the webhook to be sent to.
 
-# PREAMBLE
+# .
 
 Bybit bot is an automated cryptocurrency trading bot that will place orders on Bybit which is not affiliated with TradingView
 This is a python bot that works with tradingview's webhook alerts! You need a server with a public IP such as 212.49.95.112 which you have to add to TradingView Webhook section. The server ip need to be configured like below: Lines:  43-46 of webhook-bot.py however more requests and responses can be handled here in future. 
