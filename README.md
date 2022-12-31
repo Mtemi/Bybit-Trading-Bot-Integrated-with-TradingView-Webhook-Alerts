@@ -5,8 +5,10 @@ Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook and can do Terminal 
 # ABOUT US: 
 You can hire me here:  https://freelancer.com/u/Beannsofts  for any trading bot development.  We have bots for trading in any cryptocurrency exchange. 
 
-# OTHER ADVANCED BOTS:
-Access 3commas clone bot here(under development): https://3c.crypttops.com/ and api/backend: https://api.3commas.crypttops.com/ (with the ability for users of the platform to create custom and profitable trading strategies. Users are able to create Smart/GRID/DCA trading bots,Create and Upload custom trading bots, Integrate with TradingView(https://www.tradingview.com/), receive Telegram notifications, Manage Crypto profile across various investments, Terminal Trading as well as get live crypto market charts and trade data. ) , https://binatv.crypttops.com/ (Advanced Smart Trading Application and TradingView Integration) , https://binancetradingview.crypttops.com/(Smart Trading Application and TradingView Integration) and other community implementations(https://freqtrade.crypttops.com/)
+# OTHER ADVANCED TRADING ALGORITHMS:
+One of the major risks in trading is opening a profitable futures position that realizes profits from let's say 1%, 3%, 5%, 17%, 37%, 55%, 70%, etc, but as a trader is asleep or unaware, these profits start dropping back to 30%, 22%, 16%, 8%, 0%, -3%, -10%, etc.
+
+I have to build a risk management algorithm that fully or partially closes an open position when PNL starts dropping thus securing users' funds. The risk management algorithm is complete and I can test it with TRADERS who have best strategies for trade entries. This algorithm utilizes https://www.tradingview.com/ for trade entries, however, ANY source of trade signals is still applicable. The sole function of the Dynamic Grid Risk Algorithm is to manage open positions by tracking PNL. The algorithm chills as long as PNL is positive but partially or fully closes an open position when PNL starts reducing. This helps traders minimize the loss of realized profits by 98%. The dynamic grid bot accessible here: https://disdev.crypttops.com/
 
 # UPGRADED VERSION OF THIS REPO(BOT): 
 A Pro Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
