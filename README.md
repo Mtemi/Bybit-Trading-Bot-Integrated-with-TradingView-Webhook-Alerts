@@ -1,15 +1,6 @@
-Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook . Here is also an advanced risk Bybit orders risk management algorithm: https://disdev.crypttops.com/
-You can hire me here:  https://freelancer.com/u/Beannsofts  for any trading bot development.  We have bots for trading in any cryptocurrency exchange. 
+Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook . 
 
-# Risk Management Dynamic Grid Algorithm
-One of the major risks in trading is opening a futures position that realizes profits from let's say 1%, 3%, 5%, 17%, 37%, 55%, 70%, etc, but as a trader is asleep or unaware of market behavior, these profits may start dropping back to 30%, 22%, 16%, 8%, 0%, -3%, -10%, etc.
-
-I have to build a risk management Dynamic Grid algorithm that fully or partially closes an open position when PNL starts dropping thus securing users' funds. The risk management algorithm is complete and I can test it with TRADERS who have best strategies for trade entries. This algorithm utilizes https://www.tradingview.com/ for trade entries, however, ANY source of trade signals is still applicable. The sole function of the Dynamic Grid Risk Algorithm is to manage open positions by tracking PNL. The algorithm chills as long as PNL is positive but partially or fully closes an open position when PNL starts reducing. This helps traders minimize the loss of realized profits by 98%. The dynamic grid bot is accessible here: https://disdev.crypttops.com/  .To use the algorithm , you need to register, add your Bybit API key and secret, then I will share info on how to connect with any TradingView strategy. I can as well connect you to my TradingView strategy.  
-
-# Better Version: 
-A Better Version of this bot can be tested here: Here is the link: https://t.me/cryptto_ops_bot . This is a live bot and so you need valid Bybit Keys.
-Documenttaion on how to install the Pro Version is accessible here:  https://drive.google.com/file/d/15tbaaixwq7iao7wz-5MmwgSkt9CCzyPb/view
-Contact me on whatsapp:  +254795557216 if you need the better version. 
+After setting up this bot, which is an easy version, you can also get a more advanced version here: ###https://github.com/Mtemi/BybitTelegramBot   for free. 
 
 # Setup of this Bot: 
 You can setup a free version of this bot with the instructions below !!!! 
