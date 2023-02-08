@@ -17,7 +17,7 @@ click==7.1.2
 clipboard==0.0.4
 colorama==0.4.3
 copypaste==0.2
-cryptography==3.3.2
+cryptography==39.0.1
 decorator==4.4.2
 Flask==1.1.2
 Flask-Session==0.3.2
